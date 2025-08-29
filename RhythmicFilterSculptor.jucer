@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT id="RhythmicFilterSculptor" name="Whirlpool" projectType="audioplug"
+              version="1.0.0" companyName="Orcas Audio" companyCopyright="2025 Orcas Audio"
+              companyWebsite="https://www.orcasaudio.com" companyEmail="support@orcasaudio.com"
+              qaNote="Metadata verified 2025-06-24. Company: Orcas Audio. Website: www.orcasaudio.com."
+              reportAppUsage="1" displaySplashScreen="1" splashScreenColour="Dark"
+              pluginName="Whirlpool" pluginDesc="Tempo-synced rhythmic filter effect"
+              pluginCode="RhFS" pluginChannelConfigs="{1, 1}, {2, 2}" pluginIsSynth="0"
+              pluginWantsMidiIn="0" pluginProducesMidiOut="0" pluginIsMidiEffectPlugin="0"
+              pluginEditorRequiresKeys="0" pluginAUExportPrefix="WhirlpoolAU"
+              pluginRTASCategory="2" aaxIdentifier="com.orcasaudio.whirlpool"
+              pluginAAXCategory="16" compilerWarningsAreErrors="0" headerPath=""
+              defines="JUCE_DISPLAY_SPLASH_SCREEN=0&#10;JUCE_REPORT_APP_USAGE=0&#10;JUCE_WEB_BROWSER=0&#10;JUCE_USE_CURL=0&#10;JUCE_VST3_CAN_REPLACE_VST2=0"
+              cppLanguageStandard="17" jucerFormatVersion="1">
+  <MAINGROUP id="vJ8zYy" name="RhythmicFilterSculptor">
+    <GROUP id="{F1A8E0E1-2B3C-4D5E-6F7A-8B9C0D1E2F3A}" name="Source">
+      <GROUP id="{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}" name="DSP">
+        <FILE id="FilterBank" name="FilterBank.cpp" compile="1" resource="0"
+              file="Source/DSP/FilterBank.cpp"/>
+        <FILE id="FilterBankH" name="FilterBank.h" compile="0" resource="0"
+              file="Source/DSP/FilterBank.h"/>
+        <FILE id="PatternSequencer" name="PatternSequencer.cpp" compile="1"
+              resource="0" file="Source/DSP/PatternSequencer.cpp"/>
+        <FILE id="PatternSequencerH" name="PatternSequencer.h" compile="0"
+              resource="0" file="Source/DSP/PatternSequencer.h"/>
+        <FILE id="TempoSync" name="TempoSync.cpp" compile="1" resource="0"
+              file="Source/DSP/TempoSync.cpp"/>
+        <FILE id="TempoSyncH" name="TempoSync.h" compile="0" resource="0" file="Source/DSP/TempoSync.h"/>
+      </GROUP>
+      <GROUP id="{B2C3D4E5-F6A7-8901-BCDE-F23456789ABC}" name="Parameters">
+        <FILE id="ParameterDefinitions" name="ParameterDefinitions.cpp" compile="1"
+              resource="0" file="Source/Parameters/ParameterDefinitions.cpp"/>
+        <FILE id="ParameterDefinitionsH" name="ParameterDefinitions.h" compile="0"
+              resource="0" file="Source/Parameters/ParameterDefinitions.h"/>
+      </GROUP>
+      <GROUP id="{C3D4E5F6-A7B8-9012-CDEF-345678901BCD}" name="GUI">
+        <FILE id="CustomLookAndFeel" name="CustomLookAndFeel.cpp" compile="1"
+              resource="0" file="Source/GUI/CustomLookAndFeel.cpp"/>
+        <FILE id="CustomLookAndFeelH" name="CustomLookAndFeel.h" compile="0"
+              resource="0" file="Source/GUI/CustomLookAndFeel.h"/>
+      </GROUP>
+      <FILE id="PluginProcessor" name="PluginProcessor.cpp" compile="1" resource="0"
+            file="Source/PluginProcessor.cpp"/>
+      <FILE id="PluginProcessorH" name="PluginProcessor.h" compile="0" resource="0"
+            file="Source/PluginProcessor.h"/>
+      <FILE id="PluginEditor" name="PluginEditor.cpp" compile="1" resource="0"
+            file="Source/PluginEditor.cpp"/>
+      <FILE id="PluginEditorH" name="PluginEditor.h" compile="0" resource="0"
+            file="Source/PluginEditor.h"/>
+    </GROUP>
+    <FILE id="ef5LOi" name="companyTypeface.ttf" compile="0" resource="1"
+          file="../../../../Users/15033/Desktop/orcasFonts/companyTypeface.ttf"/>
+    <FILE id="lRlzFM" name="whirlpool_1.ttf" compile="0" resource="1" file="../../../../Users/15033/Desktop/orcasFonts/whirlpool_1.ttf"/>
+  </MAINGROUP>
+  <MODULES>
+    <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_devices" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_formats" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_plugin_client" showAllCode="1" useLocalCopy="0"
+            useGlobalPath="1"/>
+    <MODULE id="juce_audio_processors" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_utils" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_dsp" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_events" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+  </MODULES>
+  <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1" JUCE_VST3_CAN_REPLACE_VST2="0"/>
+  <EXPORTFORMATS>
+    <VS2022 targetFolder="Builds/VisualStudio2022">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug" targetName="Whirlpool" binaryPath=""
+                       headerPath="" libraryPath="" userNotes="" defines="" optimisation="1"
+                       linkTimeOptimisation="0" recommendedWarnings="LLVM" useRuntimeLibDLL="0"/>
+        <CONFIGURATION isDebug="0" name="Release" targetName="Whirlpool" binaryPath=""
+                       headerPath="" libraryPath="" userNotes="" defines="NDEBUG=1"
+                       optimisation="3" linkTimeOptimisation="1" recommendedWarnings="LLVM"
+                       useRuntimeLibDLL="0"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_audio_basics" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_core" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_dsp" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../../JUCE/modules"/>
+      </MODULEPATHS>
+    </VS2022>
+    <XCODE_MAC targetFolder="Builds/MacOSX">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug" targetName="Whirlpool" binaryPath=""
+                       headerPath="" libraryPath="" osxSDK="default" osxCompatibility="10.13"
+                       osxArchitecture="x86_64,arm64" customXcodeFlags="" cppLanguageStandard="17"
+                       cppLibType="libc++" defines="" optimisation="1"/>
+        <CONFIGURATION isDebug="0" name="Release" targetName="Whirlpool" binaryPath=""
+                       headerPath="" libraryPath="" osxSDK="default" osxCompatibility="10.13"
+                       osxArchitecture="x86_64,arm64" customXcodeFlags="" cppLanguageStandard="17"
+                       cppLibType="libc++" defines="NDEBUG=1" optimisation="3"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_audio_basics" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_core" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_dsp" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../../JUCE/modules"/>
+      </MODULEPATHS>
+    </XCODE_MAC>
+    <LINUX_MAKE targetFolder="Builds/LinuxMakefile">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug" targetName="Whirlpool" binaryPath=""
+                       headerPath="" libraryPath="" defines="" optimisation="1"/>
+        <CONFIGURATION isDebug="0" name="Release" targetName="Whirlpool" binaryPath=""
+                       headerPath="" libraryPath="" defines="NDEBUG=1" optimisation="3"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_audio_basics" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_core" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_dsp" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../../JUCE/modules"/>
+      </MODULEPATHS>
+    </LINUX_MAKE>
+  </EXPORTFORMATS>
+</JUCERPROJECT>
